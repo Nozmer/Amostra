@@ -1,16 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 body {
     box-sizing: content-box;
-    background-color: #212121;
+    background-color: #050505;
     margin: 50px 0 0 0;
 }
 
 p,
 h1,
-h2 {
+h2,
+h3,
+input {
     color: white;
     margin: 0;
     font-family: 'Montserrat';
+}
+
+a {
+    color: unset;
+    cursor: pointer;
+}
+
+#colorize {
+    color: #F58989;
+}
+
+#colorizeB {
+    color: #89A7F5;
+}
+
+#dados {
+    font-family: 'Montserrat';
+    color: #949494;
 }
 
 h1,
@@ -23,6 +44,12 @@ h2 {
     line-height: 40px;
 }
 
+h3 {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
 h1 {
     font-size: 30px;
     text-align: center;
@@ -32,10 +59,6 @@ p {
     font-weight: 500;
     font-size: 15px;
     line-height: 25px;
-}
-
-.conteiner {
-    margin: 0 auto;
 }
 
 .wapper,
@@ -56,12 +79,10 @@ p {
 }
 
 #box-3 {
-    display: grid;
-    row-gap: 7px;
     height: fit-content;
     padding: 30px;
     box-sizing: border-box;
-    border: 3px dashed #4D4D4D;
+    border: 2px dashed #4D4D4D;
 }
 
 #box-0 {
@@ -81,21 +102,20 @@ p {
 }
 
 #box-1 p,
-#box-2 p,
-#box-1 h2,
-#box-2 h2 {
+#box-1 h2 {
     max-width: 210px;
 }
 
 #box-3 h2,
-#box-3 p {
+#box-3 p,
+#box-2 p,
+#box-2 h2 {
     max-width: 330px;
 }
 
 #box-0,
 #box-1,
 #box-2 {
-    background: #212121;
     border: 1px solid #4D4D4D;
     border-radius: 0px 0px 8px 8px;
 }
@@ -113,21 +133,9 @@ p {
 
 .wapper-row {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     column-gap: 10px;
     row-gap: 17px;
-}
-
-#wapper-row-1 {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    height: fit-content;
-    row-gap: 8px;
-}
-
-#wapper-row-2 {
-    display: flex;
-    justify-content: end;
 }
 
 #info-c {
@@ -160,7 +168,7 @@ p {
     margin-top: 80px;
     width: 100%;
     height: fit-content;
-    background-color: #111111;
+    background-color: #101010;
 }
 
 .bottom-copyright img {
@@ -186,6 +194,299 @@ p {
     height: 15px;
 }
 
+#search {
+    display: grid;
+    grid-template-columns: 28px auto;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 18px;
+    width: 100%;
+    background: #41414140;
+    height: 42px;
+    border-radius: 50px;
+}
+
+#search img {
+    padding-top: 5px;
+    height: 20px;
+}
+
+input {
+    background-color: unset;
+    height: fit-content;
+    border: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+.box-city {
+    position: relative;
+    width: 300px;
+    height: 120px;
+    border: 1px solid #4D4D4D;
+    border-radius: 0px 0px 8px 8px;
+}
+
+#info {
+    display: grid;
+    row-gap: 10px;
+    padding: 10px 20px 30px 20px;
+}
+
+.select {
+    display: none;
+    opacity: 0;
+    grid-template-columns: 135px auto;
+    column-gap: 10px;
+}
+
+.visto {
+    display: grid;
+    row-gap: 10px;
+    justify-content: end;
+}
+
+.box-v {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    padding: 3px 28px 3px 28px;
+    text-align: center;
+    border: 1px solid #353535;
+}
+
+#fontz,
+.vistoria p {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.vistoria p {
+    font-size: 12px;
+}
+
+.box-v p {
+    font-family: 'Montserrat';
+    color: #F58989;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#cover {
+    object-fit: cover;
+    border-bottom: 2px solid #4D4D4D;
+    width: 100%;
+    height: 50px;
+}
+
+.grid-city {
+    margin: 0 auto;
+    margin-top: 30px;
+    row-gap: 20px;
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    width: fit-content;
+}
+
+/*Vistoria*/
+
+.show-bairro, .vistoria {
+    display: none;
+    visibility: hidden;
+}
+
+.grid-bairro {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 15px;
+    column-gap: 15px;
+    width: fit-content;
+}
+
+.box-bairro {
+    display: grid;
+    row-gap: 5px;
+    width: 335px;
+    height: fit-content;
+    background: #161616;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.grid-bairro-info p {
+    font-size: 12px;
+    line-height: 24px;
+}
+
+.grid-bairro-info {
+    margin: 0 auto;
+    margin-top: 20px;
+    display: grid;
+    height: fit-content;
+    width: fit-content;
+    row-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: auto auto;
+}
+
+#box-right {
+    display: grid;
+    height: fit-content;
+    row-gap: 15px;
+}
+
+#box-dupla {
+    margin: 0 auto;
+    display: grid;
+    width: fit-content;
+    height: fit-content;
+    row-gap: 20px;
+    grid-template-rows: auto auto auto;
+}
+
+#box-description {
+    width: 335px;
+    height: fit-content;
+    background: #161616;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#box-image {
+    margin: 0 auto;
+    object-fit: cover;
+    width: 275px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+#box-technical,
+#box-download {
+    width: 275px;
+    border-radius: 5px;
+    background: #161616;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+#grid-back{
+    display: grid;
+    width: fit-content;
+    column-gap: 8px;
+    grid-template-columns: auto auto auto;
+}
+
+.retorna {
+    display: none;
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    background-color: #161616;
+    border-radius: 5px;
+    padding: 0px 5px 0px 5px;
+}
+
+@keyframes ir {
+    from {
+        height: 120px;
+    }
+    to {
+        height: 190px;
+    }
+}
+
+@keyframes animOpe {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes animEnd {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+:root {
+    /*box-city*/
+    --front-height: 0;
+    --end-height: 0;
+
+    /*box-3*/
+    --box-front-height: 0;
+    --box-end-height: 0;
+}
+
+@keyframes choicebar {
+    from {
+        width: 300px;
+        height: var(--front-height);
+    }
+    to {
+        width: 100%;
+        height: var(--end-height);
+    }
+}
+
+@keyframes bairro {
+    from {
+        width: 100%;
+        height: var(--front-height);
+    }
+    to {
+        width: 100%;
+        height: var(--end-height);
+    }
+}
+
+@keyframes voltarEscolhaVistoria {
+    from {
+        width: 100%;
+        height: var(--front-height);
+    }
+    to {
+        width: 100%;
+        height: var(--end-height);
+    }
+}
+
+@keyframes voltarEscolhaVistoriaBOX {
+    from {
+        height: var(--box-front-height);
+    }
+    to {
+        height: var(--box-end-height);
+    }
+}
+
+@keyframes voltarEscolhaAnoVistoria {
+    from {
+        width: 100%;
+        height: var(--front-height);
+    }
+    to {
+        width: 300px;
+        height: var(--end-height);
+    }
+}
+
+
 @media only screen and (max-width: 1400px) {
     .wapper,
     .subWapper {
@@ -208,9 +509,46 @@ p {
     .conteiner {
         margin: 0 70px 0 70px;
     }
+    .grid-bairro {
+        grid-template-columns: auto;
+    }
+
+    .grid-bairro-info {
+        width: unset;
+        grid-template-columns: auto;
+    }
+
+    #box-dupla, .grid-bairro  {
+        width: unset;
+        margin: unset;
+    }
+
+    #box-technical, #box-download, .box-bairro, #box-description {
+        width: 100%;
+    }
+
+    .grid-bairro  {
+        margin-top: 20px;
+    }
+
+    #box-3 h2, #box-3 p, #box-2 p, #box-2 h2 {
+        max-width: unset;
+    }
+
+    .grid-city {
+        grid-template-columns: auto;
+        margin: unset;
+        margin-top: 30px;
+        width: 100%;
+    }
+
+    .box-city {
+        width: 100%;
+    }
+
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 600px) {
     .conteiner {
         margin: 0 30px 0 30px;
     }
@@ -245,5 +583,24 @@ p {
     }
     #wapper-row-2 {
         justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    #box-3{
+        padding: unset;
+        border: unset;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    #box-image {
+        width: fit-content;
+        height: fit-content;
+    }
+
+    #box-image img {
+        width: fit-content;
+        height: 100px;
     }
 }

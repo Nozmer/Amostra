@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/process.js"></script>
 </head>
 
 <body>
@@ -29,24 +30,229 @@
                 </div>
 
                 <div id="box-2">
-                    <div class="wapper-row">
-                        <div id="wapper-row-1">
-                            <h2><i>uau!</i> Como funciona?</h2>
-                            <p>Veja no ótimo exemplo ao lado.</p>
-                            <p>Confira as ferramentas abaixo.</p>
-                            <p id="info-c"><i>Clique para ampliar a imagem.</i></p>
-                        </div>
-                        <div id="wapper-row-2">
-                            <img src="imgs/tutorial.png" alt="Imagem auxiliar">
-                        </div>
-                    </div>
+                    <h2>Você está em uma área de <span style="color: #D85E5E;">risco</span>?</h2>
+                    <p>Confira no banco dados se há riscos de enchentes, deslizamentos, ou até mesmos terremotos em seu bairro.</p>
                 </div>
 
             </div>
-
             <div id="box-3">
-                <h2>Você está em uma área de <span style="color: #D85E5E;">risco</span>?</h2>
-                <p>Confira no mapa se há riscos de enchentes, deslizamentos, ou até mesmos terremotos em seu bairro.</p>
+                <div id="search">
+                    <img src="imgs/searching.png" alt="">
+                    <input type="text" id="input_search" onkeyup="search()" placeholder="Pesquise um local">
+                </div>
+
+                <div class="grid-city" id="grid-city">
+
+                    <div class="box-city" id="c1">
+                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+
+                        <div id="info">
+
+                            <div id="grid-back">
+                                <h3 id="1" onClick="start(this.id)">Contagem</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select" id="select1">
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div id="grid-choice-1">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" id="bairro-1-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="box-city" id="c2">
+                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                        <div id="info">
+                            
+                            <div id="grid-back">
+                                <h3 id="2" onClick="start(this.id)">Gorvenador</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select" id="select2">
+
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v" id="2">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-2" style="display: none;">
+                                <div id="grid-choice-2">
+                                    <p>Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="show-bairro" id="bairro-1-idcity-2">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box-city" id="c3">
+                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                        <div id="info">
+                            <h3 id="3" onClick="start(this.id)">Betim</h3>
+                        </div>
+                    </div>
+
+                    <div class="box-city" id="c4">
+                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                        <div id="info">
+                            <h3 id="4" onClick="start(this.id)">Belo Horizonte</h3>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
@@ -60,6 +266,7 @@
             <a href="https://funecriacho.com.br/"><img src="imgs/logo-funec.png" alt="logo-funec"></a>
         </div>
     </div>
+
 </body>
 
 </html>
