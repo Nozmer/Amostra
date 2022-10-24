@@ -297,8 +297,6 @@ function search() {
 
     var h = window.innerHeight;
 
-    alert(h);
-
     // redefinir animações e visibilidade da grid-city
     if (h < 1060) {
         grid_city[0].style.gridTemplateColumns = "auto";
