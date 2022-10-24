@@ -196,7 +196,7 @@ function retorna1() {
     vistoria.style.display = "none";
     document.getElementById("select" + idCity).style.animation = "none";
     document.getElementById("select" + idCity).style.visibility = "hidden";
-    document.getElementById("select" + idCity).style.display = "block";
+    document.getElementById("select" + idCity).style.display = "grid";
 
     // Obter altura depois
         var sectionHeight = total[idCity - 1].scrollHeight;
@@ -295,6 +295,21 @@ function retorna2() {
 function search() {
     var input, filter, txt, i, txtValue;
 
+    var h = window.innerHeight;
+
+    alert(h);
+
+    // redefinir animações e visibilidade da grid-city
+    if (h < 1060) {
+        grid_city[0].style.gridTemplateColumns = "auto";
+        grid_city[0].style.width = "100%";
+        grid_city[0].style.animation = "none";
+    } else {
+        grid_city[0].style.gridTemplateColumns = "auto auto";
+        grid_city[0].style.width = "fit-content";
+        grid_city[0].style.animation = "none";
+    }
+
     // redefinir animações e visibilidade da box-city e select
     for (let i = 0; i < classRetorna.length; i++) {
         classRetorna[i].style.display = "none";
@@ -314,12 +329,6 @@ function search() {
         classSelect[i].style.display = "none";
         classSelect[i].style.animation = "none";
     }
-
-    // redefinir animações e visibilidade da grid-city
-    grid_city[0].style.gridTemplateColumns = "auto auto";
-    grid_city[0].style.width = "fit-content";
-    grid_city[0].style.animation = "none";
-
 
     input = document.getElementById('input_search');
     filter = input.value.toLowerCase();
