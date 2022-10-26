@@ -15,6 +15,8 @@ function start(clicked_id) {
     idCity = "";
     idCity += clicked_id;
 
+    document.getElementById(idCity).removeAttribute("onclick");
+
     // redefinir animações e visibilidade da box-city e select
     for (let i = 0; i < classRetorna.length; i++) {
         classRetorna[i].style.display = "none";
@@ -47,6 +49,7 @@ function start(clicked_id) {
 
 // Exbir as vistorias de um ano
 function choicebar(anoVistoria) {
+
     vistoriaAno = "";
     vistoriaAno += anoVistoria;
 
@@ -82,13 +85,20 @@ function choicebar(anoVistoria) {
         document.documentElement.style.setProperty('--end-height', sectionHeightPX);
 
     total[idCity - 1].style.animation = "none";
+    var w = window.innerWidth;
+
     // Ocultar todas as outras "box-city" e exibir apenas a selecionada
     for (let i = 0; i < total.length; i++) {
         if (idCity - 1 != i) {
             total[i].style.display = "none";
         } else {
             total[i].style.display = "block";
-            total[i].style.animation = "choicebar 1s forwards";
+
+            if (w < 1060) {
+                total[i].style.animation = "choicebar-MOBILE 1s forwards";
+            } else {
+                total[i].style.animation = "choicebar 1s forwards";
+            }  
 
             setTimeout(function(){
                 retorna1.style.display = "block";
@@ -103,7 +113,11 @@ function choicebar(anoVistoria) {
     // Definir a grid city 
     for (let i = 0; i < grid_city.length; i++) {
         grid_city[i].style.animation = "none";
-        grid_city[i].style.animation = "choicebar 1s forwards";
+        if (w < 1060) {
+            grid_city[i].style.animation = "choicebar-MOBILE 1s forwards";
+        } else {
+            grid_city[i].style.animation = "choicebar 1s forwards";
+        }  
         grid_city[i].style.gridTemplateColumns = "none";
         grid_city[i].style.width = "100%";
     }
@@ -205,7 +219,13 @@ function retorna1() {
     // Aplicar a altura obitida na propridade "--end-height"
         document.documentElement.style.setProperty('--end-height', sectionHeightPX);
 
-    total[idCity - 1].style.animation = "voltarEscolhaAnoVistoria 1s forwards";
+    var w = window.innerWidth;
+
+    if (w < 1060) {
+        total[idCity - 1].style.animation = "voltarEscolhaAnoVistoria_MOBILE 1s forwards";
+    } else {
+        total[idCity - 1].style.animation = "voltarEscolhaAnoVistoria 1s forwards";
+    }
 
     total[idCity - 1].addEventListener('animationend', () => {
         document.getElementById("select" + idCity).style.visibility = "visible";
@@ -215,14 +235,18 @@ function retorna1() {
     // Definir a grid city 
     for (let i = 0; i < grid_city.length; i++) {
         grid_city[i].style.animation = "none";
-        grid_city[i].style.animation = "voltarEscolhaAnoVistoria 1s forwards";
+        if (w < 1060) {
+            grid_city[i].style.animation = "voltarEscolhaAnoVistoria_MOBILE 1s forwards";
+        } else {
+            grid_city[i].style.animation = "voltarEscolhaAnoVistoria 1s forwards";
+        }
     }
 }
 
 // Retornar para seleção de vistoria 
 function retorna2() {
     let retorna1 = document.getElementById("retorna1");
-    retorna1.style.display = "block";
+    
     let box_3 = document.getElementById("box-3");
 
     let grid_choice = document.getElementById("grid-choice-" + idCity);
@@ -285,6 +309,8 @@ function retorna2() {
 
     // esperar animação terminar para exibir
     setTimeout(function(){
+        retorna1.style.display = "block";
+
         grid_choice.style.visibility = "visible";
         grid_choice.style.animation = "animOpe 0.6s forwards";
     }, 1000);
@@ -294,11 +320,15 @@ function retorna2() {
 // Pesquisa
 function search() {
     var input, filter, txt, i, txtValue;
+    let titulo_city = document.getElementsByClassName("titulo-city");
 
-    var h = window.innerHeight;
+    const att = document.createAttribute("onclick");
+    att.value = "start(this.id)";
+
+    var w = window.innerWidth;
 
     // redefinir animações e visibilidade da grid-city
-    if (h < 1060) {
+    if (w < 1060) {
         grid_city[0].style.gridTemplateColumns = "auto";
         grid_city[0].style.width = "100%";
         grid_city[0].style.animation = "none";
@@ -309,6 +339,12 @@ function search() {
     }
 
     // redefinir animações e visibilidade da box-city e select
+    for (let i = 0; i < titulo_city.length; i++) {
+        if (titulo_city[i].getAttribute("onclick") != "start(this.id)") {
+            titulo_city[i].setAttributeNode(att);
+        }
+    }
+
     for (let i = 0; i < classRetorna.length; i++) {
         classRetorna[i].style.display = "none";
         classRetorna[i].style.animation = "none";
