@@ -10,6 +10,18 @@ let idCity = "";
 let bairroUsado = "";
 let vistoriaAno = "";
 
+// Exbição apenas 4
+function loading(){
+    for (let i = 0; i < total.length; i++) {
+        if (i <= 3) {
+            total[i].style.display = "block";
+        }
+        else {
+            total[i].style.display = "none";
+        }
+    }
+}
+
 // Animação 
 function start(clicked_id) {
     idCity = "";
@@ -37,32 +49,31 @@ function start(clicked_id) {
         grid_city[0].style.animation = "Voltar1 1s forwards";
     }
 
-    if (document.getElementById("c" + idCity).style.animation === "1s ease 0s 1 normal forwards running choicebar") {
-        document.getElementById("c" + idCity).style.animation = "Voltar1 1s forwards";
+    if (total[idCity - 1].style.animation === "1s ease 0s 1 normal forwards running choicebar") {
+        total[idCity - 1].style.animation = "Voltar1 1s forwards";
     } else {
-        document.getElementById("c" + idCity).style.animation = "ir 0.6s forwards";
+        total[idCity - 1].style.animation = "ir 0.6s forwards";
     }
 
-    document.getElementById("select" + idCity).style.display = "grid";
-    document.getElementById("select" + idCity).style.animation = "animOpe 0.6s forwards";
+    total[idCity - 1].getElementsByClassName("select")[0].style.display = "grid";
+    total[idCity - 1].getElementsByClassName("select")[0].style.animation = "animOpe 0.6s forwards";
 }
 
 // Exbir as vistorias de um ano
 function choicebar(anoVistoria) {
-
     vistoriaAno = "";
     vistoriaAno += anoVistoria;
 
-    let retorna1 = document.getElementById("retorna1");
+    let retorna1 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[0];
         //Redefinir
         retorna1.style.display = "none";
         retorna1.style.animation = "none";
 
     // remover a id "select"
-    document.getElementById("select" + idCity).style.display = "none";
+    total[idCity - 1].getElementsByClassName("select")[0].style.display = "none";
 
     // Obter a altura do id "info"
-    let vistoria = document.getElementById("vistoria-" + vistoriaAno + "-" + idCity);
+    let vistoria = total[idCity - 1].getElementsByClassName("vistoria")[0]
         // redefinir
         vistoria.style.visibility = "hidden";
         vistoria.style.animation = "none";
@@ -132,19 +143,19 @@ function bairro(bairroSelecionado) {
     // Redefinir
         box_3.style.animation = "none";
 
-    let retorna2 = document.getElementById("retorna2");
+    let retorna2 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[1];
         //Redefinir
         retorna2.style.display = "none";
         retorna2.style.animation = "none";
 
-    let grid_choice = document.getElementById("grid-choice-" + idCity);
+    let grid_choice = total[idCity - 1].getElementsByClassName("grid-choice")[0];
 
-    bairroSelecionado = document.getElementById('bairro-' + bairroSelecionado + "-idcity-" + idCity);
+    bairroSelecionado = total[idCity - 1].getElementsByClassName("show-bairro")[bairroSelecionado - 1];
         //Redefinir
         bairroSelecionado.style.animation = "none";
         bairroSelecionado.style.visibility = "hidden";
 
-    let retorna1 = document.getElementById("retorna1");
+    let retorna1 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[0];
     retorna1.style.display = "none";
 
     // Obter altura antes
@@ -184,17 +195,17 @@ function retorna1() {
     // Redefinir
         box_3.style.animation = "none";
 
-    let retorna1 = document.getElementById("retorna1");
+    let retorna1 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[0];
     // Redefinir
         retorna1.style.display = "none";
         retorna1.style.animation = "none";
 
-    let grid_choice = document.getElementById("grid-choice-" + idCity);
+    let grid_choice = total[idCity - 1].getElementsByClassName("grid-choice")[0];
         // Redefinir
         grid_choice.style.animation = "none";
         grid_choice.style.visibility = "unset";
 
-    let vistoria = document.getElementById("vistoria-" + vistoriaAno + "-" + idCity);
+    let vistoria = total[idCity - 1].getElementsByClassName("vistoria")[0]
     // Redefinir
         vistoria.style.animation = "none";
 
@@ -208,9 +219,9 @@ function retorna1() {
     // remover a id "vistoria"
     total[idCity - 1].style.animation = "none";
     vistoria.style.display = "none";
-    document.getElementById("select" + idCity).style.animation = "none";
-    document.getElementById("select" + idCity).style.visibility = "hidden";
-    document.getElementById("select" + idCity).style.display = "grid";
+    total[idCity - 1].getElementsByClassName("select")[0].style.animation = "none";
+    total[idCity - 1].getElementsByClassName("select")[0].style.visibility = "hidden";
+    total[idCity - 1].getElementsByClassName("select")[0].style.display = "grid";
 
     // Obter altura depois
         var sectionHeight = total[idCity - 1].scrollHeight;
@@ -228,8 +239,8 @@ function retorna1() {
     }
 
     total[idCity - 1].addEventListener('animationend', () => {
-        document.getElementById("select" + idCity).style.visibility = "visible";
-        document.getElementById("select" + idCity).style.animation = "animOpe 0.6s forwards";
+        total[idCity - 1].getElementsByClassName("select")[0].style.visibility = "visible";
+        total[idCity - 1].getElementsByClassName("select")[0].style.animation = "animOpe 0.6s forwards";
     });
 
     // Definir a grid city 
@@ -245,19 +256,19 @@ function retorna1() {
 
 // Retornar para seleção de vistoria 
 function retorna2() {
-    let retorna1 = document.getElementById("retorna1");
+    let retorna1 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[0];
     
     let box_3 = document.getElementById("box-3");
 
-    let grid_choice = document.getElementById("grid-choice-" + idCity);
+    let grid_choice = total[idCity - 1].getElementsByClassName("grid-choice")[0];
         // Redefinir
         grid_choice.style.animation = "none";
 
-    let retorna2 = document.getElementById("retorna2");
+    let retorna2 = document.getElementsByClassName('grid-back')[idCity - 1].getElementsByClassName("retorna")[1];
         //Redefinir
         retorna2.style.animation = "none";
 
-    let bairroSelecionado = document.getElementById('bairro-' + bairroUsado + "-idcity-" + idCity);
+    let bairroSelecionado = total[idCity - 1].getElementsByClassName("show-bairro")[bairroUsado - 1];
         //Redefinir
         bairroSelecionado.style.animation = "none";
 
@@ -327,6 +338,17 @@ function search() {
 
     var w = window.innerWidth;
 
+    if (bairroUsado !== "") {
+        let bairroSelecionado = total[idCity - 1].getElementsByClassName("show-bairro")[bairroUsado - 1];
+        //Redefinir
+            bairroSelecionado.style.animation = "none";
+            bairroSelecionado.style.display = "none";
+    
+        let grid_choice = total[idCity - 1].getElementsByClassName("grid-choice")[0];
+        // Redefinir
+            grid_choice.style.display = "unset";
+    }
+
     // redefinir animações e visibilidade da grid-city
     if (w < 1060) {
         grid_city[0].style.gridTemplateColumns = "auto";
@@ -369,15 +391,25 @@ function search() {
 
     txt = document.getElementsByTagName('h3');
 
+    count = [];
+
     for (i = 0; i < txt.length; i++) {
         txtValue = txt[i].textContent || txt[i].innerText;
         txtValue = txtValue.toLocaleLowerCase();
 
         if (txtValue.indexOf(filter) > -1) {
-            total[i].style.display = "block";
+            count.push(i);
         } else {
             total[i].style.display = "none";
         }
+    }
 
+    /*Limitar apenas 4 para aparecer*/
+    for (let i = 0; i < count.length; i++) {
+        if (i < 4) {
+            total[count[i]].style.display = "block";
+        } else {
+            total[i].style.display = "none";
+        }
     }
 }

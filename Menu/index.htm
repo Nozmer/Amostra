@@ -10,7 +10,7 @@
     <script src="js/process.js"></script>
 </head>
 
-<body>
+<body onload="loading()">
     <div class="conteiner">
         <div class="wapper">
             <div id="box-0">
@@ -43,13 +43,14 @@
 
                 <div class="grid-city" id="grid-city">
 
-                    <div class="box-city" id="c1">
-                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                    <!-- Belo Horizonte 01 -->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Belo-Horizonte.webp" alt="">
 
                         <div id="info">
 
-                            <div id="grid-back">
-                                <h3 id="1" onClick="start(this.id)">Contagem</h3>
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="1" onClick="start(this.id)">Belo Horizonte</h3>
                                 <div class="retorna" id="retorna1" onclick="retorna1()">
                                     <p><b id="colorize"><</b></p>
                                 </div>
@@ -58,11 +59,11 @@
                                 </div>
                             </div>
 
-                            <div class="select" id="select1">
+                            <div class="select">
                                 <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
                                 <div class="visto">
 
-                                    <a id="2012" onClick="choicebar(this.id)">
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
                                         <div class="box-v">
                                             <p>2012</p>
                                         </div>
@@ -73,7 +74,7 @@
 
                             <div class="vistoria" id="vistoria-2012-1">
 
-                                <div id="grid-choice-1">
+                                <div class="grid-choice">
                                     <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
 
                                     <div class="grid-bairro">
@@ -85,24 +86,19 @@
                                             <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
                                             <p><b id="colorize">Data:</b> Novembro de 2012.</p>
                                         </div>
-                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
                                             <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
                                             <p><b id="colorize">Data:</b> Novembro de 2012.</p>
                                         </div>
-                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
                                             <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
                                             <p><b id="colorize">Data:</b> Novembro de 2012.</p>
                                         </div>
-                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
-                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
-                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
-                                        </div>
-
                                     </div>
 
                                 </div>
 
-                                <div class="show-bairro" id="bairro-1-idcity-1">
+                                <div class="show-bairro" >
 
                                     <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
 
@@ -143,18 +139,60 @@
 
                                 </div>
 
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
 
                         </div>
                     </div>
 
+                    <!-- Contagem 02-->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Contagem.webp" alt="">
 
-                    <div class="box-city" id="c2">
-                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
                         <div id="info">
-                            
-                            <div id="grid-back">
-                                <h3 id="2" onClick="start(this.id)">Gorvenador</h3>
+
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="2" onClick="start(this.id)">Contagem</h3>
                                 <div class="retorna" id="retorna1" onclick="retorna1()">
                                     <p><b id="colorize"><</b></p>
                                 </div>
@@ -163,38 +201,46 @@
                                 </div>
                             </div>
 
-                            <div class="select" id="select2">
-
+                            <div class="select">
                                 <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
                                 <div class="visto">
 
-                                    <a id="2012" onClick="choicebar(this.id)">
-                                        <div class="box-v" id="2">
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
                                             <p>2012</p>
                                         </div>
                                     </a>
 
                                 </div>
-
                             </div>
 
-                            <div class="vistoria" id="vistoria-2012-2" style="display: none;">
-                                <div id="grid-choice-2">
-                                    <p>Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div class="grid-choice">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
 
                                     <div class="grid-bairro">
                                         <div class="box-bairro" id="1" onClick="bairro(this.id)">
-                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
                                             <p><b id="colorize">Data:</b> Novembro de 2012.</p>
                                         </div>
                                         <div class="box-bairro" id="2" onClick="bairro(this.id)">
                                             <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
                                             <p><b id="colorize">Data:</b> Novembro de 2012.</p>
                                         </div>
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
                                     </div>
+
                                 </div>
 
-                                <div class="show-bairro" id="bairro-1-idcity-2">
+                                <div class="show-bairro">
 
                                     <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
 
@@ -234,26 +280,628 @@
                                     </div>
 
                                 </div>
+
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
                             </div>
+
                         </div>
                     </div>
 
-                    <div class="box-city" id="c3">
-                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                    <!-- Uberlândia 03-->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Uberlândia.webp" alt="">
+
                         <div id="info">
-                            <h3 id="3" onClick="start(this.id)">Betim</h3>
+
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="3" onClick="start(this.id)">Uberlândia</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select">
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div class="grid-choice">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" >
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
 
-                    <div class="box-city" id="c4">
-                        <img id="cover" src="imgs/Movimiento_-_panoramio.jpg" alt="">
+                    <!-- Juiz de Fora 04-->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Juiz-de-Fora.webp" alt="">
+
                         <div id="info">
-                            <h3 id="4" onClick="start(this.id)">Belo Horizonte</h3>
+
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="4" onClick="start(this.id)">Juiz de Fora</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select">
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div class="grid-choice">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" >
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Betim 05-->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Betim.webp" alt="">
+
+                        <div id="info">
+
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="5" onClick="start(this.id)">Betim</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select">
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div class="grid-choice">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" >
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Montes Claros 06-->
+                    <div class="box-city">
+                        <img id="cover" src="imgs/Montes-Claros.webp" alt="">
+
+                        <div id="info">
+
+                            <div class="grid-back">
+                                <h3 class="titulo-city" id="6" onClick="start(this.id)">Montes Claros</h3>
+                                <div class="retorna" id="retorna1" onclick="retorna1()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                                <div class="retorna" id="retorna2" onclick="retorna2()">
+                                    <p><b id="colorize"><</b></p>
+                                </div>
+                            </div>
+
+                            <div class="select">
+                                <p id="fontz">Selecione o <b id="colorize">ano</b> da vistoria.</p>
+                                <div class="visto">
+
+                                    <a class="yearVisto" id="2012" onClick="choicebar(this.id)">
+                                        <div class="box-v">
+                                            <p>2012</p>
+                                        </div>
+                                    </a>
+
+                                </div>
+                            </div>
+
+                            <div class="vistoria" id="vistoria-2012-1">
+
+                                <div class="grid-choice">
+                                    <p id="fontz">Encontrado <b id="colorize">30</b> vistorias em <b id="colorize">2012</b>:</p>
+
+                                    <div class="grid-bairro">
+                                        <div class="box-bairro" id="1" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="2" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="3" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                        <div class="box-bairro" id="4" onClick="bairro(this.id)">
+                                            <p><b id="colorize">Local:</b> Clube Arvoredo - Fonte Grande.</p>
+                                            <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" >
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Morada Nova - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="show-bairro" id="bairro-2-idcity-1">
+
+                                    <p id="dados">Dados: <b>Serviço Geológico do Brasil</b></p>
+
+                                    <div class="grid-bairro-info">
+
+                                        <div id="box-right">
+
+                                            <div class="box-bairro" id="1">
+                                                <p><b id="colorize">Local:</b> Casa nove - Rua 6.</p>
+                                                <p><b id="colorize">Data:</b> Novembro de 2012.</p>
+                                            </div>
+
+                                            <div class="grid-vistorias-info">
+                                                <div id="box-description">
+                                                    <p><b id="colorize">Descrição:</b> Encosta sujeita à deslizamentos. Pequena encosta de talvegue, com amplitudes que chegam a atingir 35m, declividades superiores a 45 graus, em solo residual argilo- arenoso
+                                                        derivado das rochas gnáissicas que compõem a encosta. Observa-se que as residências estão localizadas muito próximas a crista da encosta. Lixo, lançamento de águas servidas e cortes verticalizados
+                                                        para a construção de moradias também são observados. Árvores inclinadas indicam movimentação de solo.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div id="box-dupla">
+                                            <div id="box-image">
+                                                <img src="imgs/box-vistoria-img.png" alt="">
+                                            </div>
+                                            <div id="box-technical">
+                                                <p><b id="colorize">EQUIPE TÉCNICA RESPONSÁVEL</b></p>
+                                                <p><b>Geólogo</b>: Ivan Bispo de Oliveira Filho - ERJ</p>
+                                                <p><b>Geólogo</b>: Anselmo Pedrazzi - Sureg/BH</p>
+                                            </div>
+                                            <div id="box-download">
+                                                <p>Baixe este <b id="colorizeB"><a href="#">PDF</a></b>.</p>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
                         </div>
                     </div>
 
                 </div>
             </div>
+
+            <div id="version">
+                <p id="info-c">Versão 0.1 <b>BETA</b>.</p>
+            </div>
+
         </div>
     </div>
 
