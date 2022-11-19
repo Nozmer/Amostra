@@ -9,11 +9,16 @@ body {
 p,
 h1,
 h2,
-h3,
-input {
+h3{
     color: white;
     margin: 0;
     font-family: 'Montserrat';
+}
+
+input {
+    color: white;
+    margin: 0;
+    font-family: 'Roboto';
 }
 
 a {
@@ -142,7 +147,7 @@ p {
     row-gap: 17px;
 }
 
-#info-c {
+#info-c, #info-version, #info-count {
     font-weight: 500;
     font-size: 12px;
     line-height: 20px;
@@ -404,6 +409,7 @@ input:focus {
 }
 
 #version {
+    text-align: center;
     margin: 0 auto;
 }
 

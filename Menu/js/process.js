@@ -6,13 +6,21 @@ let show_bairro = document.getElementsByClassName('show-bairro');
 let classSelect = document.getElementsByClassName('select');
 let classRetorna = document.getElementsByClassName('retorna');
 
+let box_bairro = document.getElementsByClassName("box-bairro");
+
 let idCity = "";
 let bairroUsado = "";
 let vistoriaAno = "";
 
-// Exbição apenas 4
+let countCity = 0;
+let countBairro = 0;
+
+// Quando a body carregar
 function loading(){
+
+    // Contar as cidades e exbir apenas 4
     for (let i = 0; i < total.length; i++) {
+        countCity += 1;
         if (i <= 3) {
             total[i].style.display = "block";
         }
@@ -20,6 +28,14 @@ function loading(){
             total[i].style.display = "none";
         }
     }
+
+    // Contar o bairro
+    for (let i = 0; i < box_bairro.length; i++) {
+        countBairro += 1;
+    }
+
+    
+    document.getElementById("info-count").innerHTML = "Atualmente " + countCity + " cidades e " + countBairro + " vistorias.";
 }
 
 // Animação 
