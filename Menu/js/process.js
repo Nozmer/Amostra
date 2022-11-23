@@ -420,6 +420,13 @@ function search() {
         }
     }
 
+    // Exibir uma messagem quando nenhum resultado correspoder
+    if (count == "") {
+        document.getElementById("no-result").style.display = "block";
+    } else {
+        document.getElementById("no-result").style.display = "none";
+    }
+    
     /*Limitar apenas 4 para aparecer*/
     for (let i = 0; i < count.length; i++) {
         if (i < 4) {

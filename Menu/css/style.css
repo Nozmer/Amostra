@@ -374,7 +374,7 @@ input:focus {
     box-sizing: border-box;
 }
 
-#box-image {
+#box-image img{
     margin: 0 auto;
     object-fit: cover;
     width: 275px;
@@ -411,6 +411,26 @@ input:focus {
 #version {
     text-align: center;
     margin: 0 auto;
+}
+
+#no-result{
+    display: none;
+    margin: 0 auto;
+    margin-top: 25px;
+    border: 1px solid #4D4D4D;
+    border-radius: 0px 0px 8px 8px;
+    padding: 10px;
+    text-align: center;
+    width: fit-content;
+}
+
+#no-result p{
+    font-size: 12px;
+    font-family: "Arial";
+}
+
+#no-result img {
+    height: 50px;
 }
 
 @keyframes ir {
